@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<br lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie prophet </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+   
+    <h1>Movies Devotion</h1>
+    <br>
+    <div id="myDiv">
+        <input type="button" class="butt" placeholder="myId" id="myId" name="" value="Show my Id">
+    </div>
+
+    <ul>
+    <!-- endpoint 1: search a movie by string (POST) -->
+    <div>
+      <li>  <label for="movieTerm">Search a movie:</label> </li></br>
+        <input type="text" id="movieTerm" name="movieTerm">
+    </div>
+    <div>
+        <button id="searchMovieByStringButton">Search by term</button>
+    </div>
+    </br></br>
+
+    <!-- endpoint 2: search a movie by ID (GET) -->
+    <div>
+       <li> <label for="movieId">Search a movie by ID:</label> </li> </br>
+        <input type="text" id="movieId" name="movieId">
+    </div>
+    <div>
+        <button id="searchMovieByIdButton">Search by ID</button>
+    </div>
+    </br></br>
+
+    <!-- endpoint 3: search for movie ratings by array of IDs (POST) -->
+    <div>
+       <li> <label for="movieRatings">Rating search by ID(s):</label> </li> <br>
+        <input type="text" id="movieIDs" name="movieIDs">
+    </div>
+    <div>
+        <button id="searchRatingsByIDsButton">Search Movie(s) Ratings</button>
+    </div>
+    </br></br>
+
+    <!-- endpoint 4: search ratings of user by ID (GET) -->
+    <div>
+      <li>  <label for="userMovieRatings">Rating search by user ID:</label> </li> <br>
+        <input type="text" id="uid" name="uid">
+    </div>
+    <div>
+        <button id="searchRatingsByUserIDButton">Search User Ratings</button>
+    </div>
+    </br></br>
+
+    <div> 
+        <h4>Rate a movie</h6>
+        <div> 
+            <div>
+                <input  placeholder="Movie Id" type="text" id="ratingId" name=" " value="">
+            </div>  
+            <div  id="numRateId"  class="tooltip">
+                <span class="tooltiptext">Enter a value between 0.5 and 5 </span>
+                <input placeholder="0.5 - 5" type="number"  id="ratingVal" name=" " min=0 max=5 step=.5 value=""> 
+            </div>
+            <br>
+            <div>
+                <button id="rateBtn">Submit rating</button>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+    <div>
+        <h4>You might also like...</h4> 
+        <input type="button" placeholder="Recommend" id="recommendMovies" name="" value="Show me" class="butt">
+        <br>
+         <br>
+    </div>
+</ul>
+    <!-- common output area -->
+    <div id="queryResults"></div>
+
+    <script src="utils.js"></script>
+    <script src="endpoints.js"></script>
+
+</body>
+
+</html>
